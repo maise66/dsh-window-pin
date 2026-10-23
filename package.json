@@ -1,0 +1,48 @@
+{
+  "name": "dsh-window-pin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "标题栏置顶按钮：一键让 DeepSeek Harness 窗口始终显示在最前面（Windows）。· Always-on-top pin button in the DeepSeek Harness titlebar (Windows).",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./host.js",
+    "./host": "./host.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "host.js",
+    "client.js",
+    "lib",
+    "test",
+    "docs",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "window",
+    "always-on-top",
+    "topmost",
+    "置顶"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# dsh-window-pin bundle patch：把置顶按钮插件插入 profile 的 Loader 树。
+#
+# `id`（行 id）与 `name`（模块说明符）用新值：Host 进程按说明符缓存已加载的
+# 模块，同一说明符改文件不会产生新的模块代次，换新值才会重新 import。
+#
+# 可选配置（按 id 覆盖即可；config 整体替换，需要写全）：
+#   enabled: false   关闭整个插件
+- insert:
+    - id: window-pin
+      name: 'dsh-window-pin'
+      config:
+        enabled: true

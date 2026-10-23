@@ -2,6 +2,10 @@
   "name": "dsh-window-pin",
   "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maise66/dsh-window-pin.git"
+  },
   "description": "标题栏置顶按钮：一键让 DeepSeek Harness 窗口始终显示在最前面（Windows）。· Always-on-top pin button in the DeepSeek Harness titlebar (Windows).",
   "type": "module",
   "icon": "./icon.svg",
